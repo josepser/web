@@ -1,0 +1,325 @@
+/*Esto afecta a todo el body*/
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+    
+}
+
+
+/*Menu*/
+li {
+
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  padding: 10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border-bottom: 4px solid #fff;
+}
+
+li a:hover {
+  background-color: #0077c0;
+  color: #fff;
+  border-bottom: 4px solid #33b5ff;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+li a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background-color: #33b5ff;
+  transition: all 0.3s ease;
+}
+
+
+.header-area {
+    display: flex;
+    padding: 25px 0 0;
+    position: relative;
+    margin-bottom: 100px;
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+}
+.header-area .logo {
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 19px;
+    width: 300px;
+    color: #5d5d5d;
+    text-align: right;
+}
+.header-area .links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+.header-area .links li {
+    display: inline-block;
+    margin-left: 30px;
+    color: #5d5d5d;
+    cursor: pointer;
+}
+
+/*Cartas*/
+#posicion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cartas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 350px;
+  border-radius: 40px;
+  background-image: url('../img/cartas.gif');
+  margin: 10px;
+  margin-top: 80px;
+  border: none;
+  position: relative;
+  align-items: center; /* Centra verticalmente los elementos dentro de la carta */
+  justify-content: center; /* Centra horizontalmente los elementos dentro de la carta */
+}
+
+#cartas::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: url('../img/gif.gif');
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#cartas:hover::before {
+  opacity: 1;
+  animation: borderAnimation 10s linear infinite;
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+#git {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px; /* Añade margen inferior para separar la imagen del botón */
+}
+
+#titulo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+/*Boton*/
+/*** ESTILOS BOTÓN SLIDE LEFT ***/
+a {
+  text-decoration: none; 
+  color: white;
+}
+
+a:hover {
+  text-decoration: none; 
+}
+.ov-btn-slide-left {
+  font-family: 'Oswald', sans-serif;
+  background: white; 
+  color: black; 
+  border: 2px solid white; 
+  padding: 10px 15px;
+  border-radius: 3px; 
+  position: absolute;
+  z-index: 1;
+  margin-top: 250px;
+  overflow: hidden;
+  display: inline-block;
+
+}
+.ov-btn-slide-left:hover {
+  color: white; 
+  font-family: 'Oswald', sans-serif;
+}
+.ov-btn-slide-left::after {
+  content: "";
+  background: black; 
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.ov-btn-slide-left:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+#posicion {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0%;
+}
+
+#fondo {
+  background-image: url('../img/cartas.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*
+    Auther: Abdelrhman Said
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #CD201F;
+  color: #ffffff;
+}
+
+#i{
+  display: grid;
+  place-items: center;
+  flex-wrap: wrap;
+  width: 20px;
+  height: 20px;
+
+}

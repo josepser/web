@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+.formulario {
+  width: 500px;
+  max-width: 100%;
+  height: 580px;
+  margin: auto;
+  margin-top: 2%;
+  padding: 20px;
+  box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+  position: relative;
+  border-radius: 50px;
+  background-color: ;
+}
+.titulo {
+  text-align: center;
+  margin-top: 0;
+  color: skyblue;
+}
+.input, .label, .submit {
+  display: block;
+  width: 100%;
+  font-size: 1.3em;
+}
+.input {
+  padding: 20px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.3);
+  margin-bottom: 40px;
+}
+.input:focus {
+  outline: 1px solid rgba(0,0,0,0.7);
+}
+.input:focus + .label{
+  margin-top: -135px;
+}
+.label {
+  padding-left: 15px;
+  position: absolute;
+  margin-top: -85px;
+  z-index: -20;
+  color: skyblue;
+  transition: all 0.2s;
+}
+.submit {
+ background-image: url('../img/cielo.gif');
+ background-size: cover;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid blue;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+
+.fijar {
+  margin-top: -135px;
+}
+
+/*Menu*/
+li {
+
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  padding: 10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border-bottom: 4px solid #fff;
+}
+
+li a:hover {
+  background-color: #0077c0;
+  color: #fff;
+  border-bottom: 4px solid #33b5ff;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+li a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background-color: #33b5ff;
+  transition: all 0.3s ease;
+}
+
+
+.header-area {
+    display: flex;
+    padding: 25px 0 0;
+    position: relative;
+    margin-bottom: 100px;
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+}
+.header-area .logo {
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 19px;
+    width: 300px;
+    color: #5d5d5d;
+    text-align: right;
+}
+.header-area .links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+.header-area .links li {
+    display: inline-block;
+    margin-left: 30px;
+    color: #5d5d5d;
+    cursor: pointer;
+}
+
+#titulo2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+}
+
+#fondo {
+  background-image: url('../img/cartas.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
